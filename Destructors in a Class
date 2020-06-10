@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class human{
+	private:
+	int age;
+	string name;
+
+	public:
+		human()
+		{
+			cout<<"constructor is called"<<endl;
+
+		}
+
+		~human()//destructor is called to deallocate memory
+		{
+			cout<<"destruction is called"<<endl;
+		}
+};
+
+
+int main()
+{
+	human *anil = new human();
+	delete anil;
+	return 0;
+}
