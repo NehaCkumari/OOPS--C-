@@ -1,3 +1,5 @@
+// static method can be called even without creating an instance of the class.
+//They are designed with aim to be shared among all Objects created from the same class.
 //static variable initialises only at once and stored in heap.
 //for new object it starts from previous value
 
