@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class human{
+	private:
+	int age;
+	string name;
+	public:
+	//constructor is always created in public.
+	//if created privated then can not be accessed outside the class
+		human()
+		{
+			cout<<"constructor is created"<<endl;
+			age=0;
+			name="no_name";
+		}
+		void display()
+		{
+			cout<<age<<endl<<name<<endl;
+		}
+
+};
+
+
+int main()
+{
+	human anil;
+	anil.display();
+
+	return 0;
+}
