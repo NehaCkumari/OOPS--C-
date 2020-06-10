@@ -1,0 +1,31 @@
+//inheritance
+#include<iostream>
+#include<string>
+using namespace std;
+class person{
+	public:
+		int age;
+		string name;
+		void setname(string iname){name=iname;}
+		void setage(int iage){age=iage;}
+};
+
+class student : public person{
+	public:
+		int id;
+		void setid(int iid){id=iid;}
+		void display(){
+			cout<<"My name is "<<name<<" and my age is "<<age<<" and also my id is "<<id<<endl;
+		}
+};
+int main()
+{
+	student anil;
+	anil.setname("anil");
+	anil.setage(12);
+	anil.setid(1234);
+	
+	anil.display();
+	
+	return 0;
+}
