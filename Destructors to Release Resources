@@ -1,0 +1,34 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class human{
+	private:
+	int *age;
+	string *name;
+
+	public:
+		human(string iname,int iage)
+		{
+			name=new string;
+			age=new int;
+			
+			*name=iname;
+			*age=iage;
+
+		}
+
+		~human()//destructor is called to deallocate memory
+		{
+		    delete age;
+		    delete name;
+			cout<<"All memories are released"<<endl;
+		}
+};
+
+
+int main()
+{
+	human *anil = new human("anil",20);
+	delete anil;
+	return 0;
+}
