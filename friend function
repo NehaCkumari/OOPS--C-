@@ -1,0 +1,31 @@
+//friend keyword to use private variables outside the class 
+#include<iostream>
+#include<string>
+using namespace std;
+class human{
+    string name;
+    int age;
+    public:
+    human(string iname, int iage)
+    {
+        name=iname;
+        age=iage;
+    }
+    friend void display(human man);
+
+};
+
+void display(human man)
+{
+    cout<<man.name<<endl<<man.age<<endl;
+}
+
+int main()
+{
+    human anil("anil",23);
+    //anil.display();//wrong
+    display(anil);
+    
+
+	return 0;
+}
