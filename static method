@@ -1,0 +1,33 @@
+//static variable initialises only at once and stored in heap.
+//for new object it starts from previous value
+
+#include<iostream>
+#include<string>
+using namespace std;
+class human{
+    private:
+    static int count;//cannot initialise static variable inside the class
+    public:
+        human(){
+        count++;
+        }
+        
+
+        
+        static void count_method()
+        {
+            cout<<"The count is "<<count<<endl;
+        }
+};
+
+int human :: count=0;
+int main()
+{
+    human anil;
+    human ram;
+    human ram1;
+    human ram2;
+    human :: count_method();
+
+	return 0;
+}
