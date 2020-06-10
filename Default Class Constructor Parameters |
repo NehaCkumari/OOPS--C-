@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class human{
+	private:
+	int age;
+	string name;
+
+	public:
+		human(string iname ="no_name", int iage = 0)
+		{
+			cout<<"constructor with default values"<<endl;
+			age=iage;
+			name=iname;
+		}
+
+		void display()
+		{
+			cout<<age<<endl<<name<<endl;
+		}
+
+};
+
+
+int main()
+{
+	human anil;
+	anil.display();
+	
+
+	human Rama("Rama");
+	Rama.display();
+
+	human akki("akki",20);
+	akki.display();
+
+	return 0;
+}
