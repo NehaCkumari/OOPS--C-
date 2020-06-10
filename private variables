@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class human{
+	private:
+	int age;
+	public:
+		
+		void displayage()
+		{
+			cout<<"Age:"<<age;
+		}
+
+		void setage(int value)
+		{
+			age=value;
+		}
+};
+
+
+int main()
+{
+	human anil;
+	anil.setage(15);
+	anil.displayage();
+
+	return 0;
+}
